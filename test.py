@@ -1,0 +1,3 @@
+from utils import find_and_save_white_card
+
+find_and_save_white_card()
