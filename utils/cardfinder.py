@@ -54,12 +54,13 @@ def four_point_transform(image, pts):
     warped = cv2.warpPerspective(image, M, (width, height))
 
     return warped
+
 def ensure_image_exists_cv(path):
     try:
         # Try to open the image to see if it exists
         img = cv2.imread(path)
         if img is None:
-            raise FileNotFoundError
+            pass
     except FileNotFoundError:
         #print(f"No such file: {path}. Creating a blank image.")
         # Create a blank white image (you can adjust the color and size)
@@ -131,5 +132,3 @@ def find_and_save_white_card():
         # When everything is done, release the capture
         cap.release()
         cv2.destroyAllWindows()
-
-#find_and_save_white_card()
