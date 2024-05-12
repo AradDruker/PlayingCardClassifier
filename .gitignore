@@ -6,9 +6,9 @@ __pycache__/
 dataset/
 other/
 
-
 # Ignore all files in the `temp` directory
 temp/
 
-# Ignore a specific file
-trained_model.pth
+# Ignore a specific files
+*.pth
+*.csv
